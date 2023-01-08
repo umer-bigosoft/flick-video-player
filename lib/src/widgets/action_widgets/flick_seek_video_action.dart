@@ -78,15 +78,16 @@ class FlickSeekVideoAction extends StatelessWidget {
                   child: AnimatedCrossFade(
                     duration: Duration(milliseconds: 100),
                     firstChild: IconTheme(
-                      data: IconThemeData(color: Colors.transparent),
-                      child: backwardSeekIcon,
-                    ),
-                    crossFadeState: showBackwardSeek
+                        data: IconThemeData(
+                          color: Colors.transparent,
+                        ),
+                        child: forwardSeekIcon),
+                    crossFadeState: showForwardSeek
                         ? CrossFadeState.showSecond
                         : CrossFadeState.showFirst,
                     secondChild: IconTheme(
                       data: IconThemeData(color: Colors.white),
-                      child: backwardSeekIcon,
+                      child: forwardSeekIcon,
                     ),
                   ),
                 ),
@@ -107,21 +108,20 @@ class FlickSeekVideoAction extends StatelessWidget {
                   child: AnimatedCrossFade(
                     duration: Duration(milliseconds: 100),
                     firstChild: IconTheme(
-                        data: IconThemeData(
-                          color: Colors.transparent,
-                        ),
-                        child: forwardSeekIcon),
-                    crossFadeState: showForwardSeek
+                      data: IconThemeData(color: Colors.transparent),
+                      child: backwardSeekIcon,
+                    ),
+                    crossFadeState: showBackwardSeek
                         ? CrossFadeState.showSecond
                         : CrossFadeState.showFirst,
                     secondChild: IconTheme(
                       data: IconThemeData(color: Colors.white),
-                      child: forwardSeekIcon,
+                      child: backwardSeekIcon,
                     ),
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
         if (child != null) child,
