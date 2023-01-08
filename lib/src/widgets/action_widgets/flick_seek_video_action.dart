@@ -67,10 +67,10 @@ class FlickSeekVideoAction extends StatelessWidget {
               child: GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onDoubleTap: () {
-                  if (seekBackward != null) {
-                    seekBackward();
+                  if (seekForward != null) {
+                    seekForward();
                   } else {
-                    controlManager.seekBackward(duration);
+                    controlManager.seekForward(duration);
                   }
                 },
                 child: Align(
@@ -96,10 +96,10 @@ class FlickSeekVideoAction extends StatelessWidget {
               child: GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onDoubleTap: () {
-                  if (seekForward != null) {
-                    seekForward();
+                  if (seekBackward != null) {
+                    seekBackward();
                   } else {
-                    controlManager.seekForward(duration);
+                    controlManager.seekBackward(duration);
                   }
                 },
                 child: Align(
